@@ -1,0 +1,51 @@
+Create a class named Player with the following member variables/attributes (default access)
+
+Data Type        Variable Name
+
+String               name
+
+String               country
+
+String               skill
+
+Create another class called Main and write a main method to get the player details in a string separated by a comma. Use the String, split() function to display the details.
+
+Input and Output Format
+
+Refer to sample input and output for formatting specifications.
+
+All text in bold corresponds to input and the rest corresponds to output.
+
+Sample Input 1:
+
+Enter the player's details
+
+M.S.Dhoni, India, All Rounder
+
+Sample Output 1:
+
+Player Details
+
+Player Name: M.S.Dhoni
+
+Country Name: India
+
+Skill: All Rounder
+solution:
+class Player:
+    name=""
+    country=""
+    skill=""
+    def __init__(self,name,country,skill):
+        self.name=name
+        self.country=country
+        self.skill=skill
+       
+#main program
+name,country,skill=map(str,input("Enter the player's details\n").split(","))
+m1=Player(name,country,skill)
+
+print("Player Details")
+print("Player Name:",m1.name)
+print("Country Name:",m1.country)  
+print("Skill:",m1.skill)
